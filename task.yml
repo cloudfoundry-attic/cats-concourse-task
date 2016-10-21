@@ -1,0 +1,18 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: relintdockerhubpushbot/run-cats
+
+inputs:
+- name: cats-concourse-task
+- name: cf-acceptance-tests
+- name: integration-config
+run:
+  path: cats-concourse-task/task
+
+params:
+  NODES: 12
+  CONFIG_FILE_PATH: integration_config.json
