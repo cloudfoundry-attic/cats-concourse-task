@@ -11,7 +11,7 @@ inputs:
 - name: integration-config
 
 run:
-  path: cats-concourse-task/task
+  path: task
 
 params:
   NODES: 12
