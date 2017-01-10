@@ -4,14 +4,14 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: relintdockerhubpushbot/run-cats
+    repository: relintdockerhubpushbot/cat-concourse-task
 
 inputs:
 - name: runtime-ci
 - name: cf-acceptance-tests
 - name: integration-config
 run:
-  path: runtime-ci/scripts/ci/run-cats/task
+  path: cat-concourse-task/task
 
 params:
   NODES: 12
