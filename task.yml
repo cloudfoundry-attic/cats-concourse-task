@@ -7,11 +7,12 @@ image_resource:
     repository: relintdockerhubpushbot/cats-concourse-task
 
 inputs:
+- name: cats-concourse-task
 - name: cf-acceptance-tests
 - name: integration-config
 
 run:
-  path: task
+  path: cats-concourse-/task
 
 params:
   NODES: 12
