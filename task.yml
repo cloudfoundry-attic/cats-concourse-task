@@ -12,7 +12,7 @@ inputs:
 - name: integration-config
 
 run:
-  path: cats-concourse-/task
+  path: cats-concourse-task/task
 
 params:
   NODES: 12
