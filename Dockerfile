@@ -25,7 +25,8 @@ RUN \
   rm -rf /tmp/*
 
 # Install the cf CLI
-RUN wget -q -O cf.deb "https://cli.run.pivotal.io/stable?release=debian64&version=6.22.2&source=github-rel" && \
+RUN \
+  wget -q -O cf.deb "https://cli.run.pivotal.io/stable?release=debian64&version=$(cat /tmp/build/put/cf-cli/tag | sed -r 's/v+//g')&source=github-rel" && \
   dpkg -i cf.deb
 
 # Install the container networking CLI plugin
