@@ -1,6 +1,17 @@
 FROM ubuntu:trusty
 
 RUN \
+  echo "****** This is my working directory ******" && \
+  pwd && \
+  echo && \
+  echo "++++++ Here's what's in my root directory ++++++++" && \
+  ls -hla --color=tty && \
+  echo && \
+  echo "====== Here's what's one step above me ======" && \
+  ls -hla .. && \
+  echo
+
+RUN \
   apt-get update && \
   apt-get -y install \
     build-essential \
