@@ -2,7 +2,12 @@
 
 This repo contains [concourse](http://concourse.ci/) tasks
 which enable a CF developer to easily run CATs
-in a pipeline
+in a pipeline.
+
+More information about CATs
+and the format of the integration config
+can be found in the
+[cf-acceptance-tests](https://github.com/cloudfoundry/cf-acceptance-tests) repo.
 
 * [CI](https://runtime.ci.cf-app.com/teams/main/pipelines/cf-release?groups=cf-release)
 * [Roadmap](https://www.pivotaltracker.com/n/projects/1382120)
