@@ -23,8 +23,8 @@ ARG version
 RUN wget -q -O cf.deb "https://cli.run.pivotal.io/stable?release=debian64&version=${version}&source=github-rel"
 RUN dpkg -i cf.deb
 
-# Install the container networking CLI plugin
-RUN wget -q -O /tmp/network-policy-plugin "https://github.com/cloudfoundry-incubator/netman-release/releases/download/v0.11.0/network-policy-plugin-linux64" && \
+# Install the CF Networking CLI plugin
+RUN wget -q -O /tmp/network-policy-plugin "https://github.com/cloudfoundry-incubator/cf-networking-release/releases/download/v0.14.0/network-policy-plugin-linux64" && \
   chmod +x /tmp/network-policy-plugin && \
   cf install-plugin /tmp/network-policy-plugin -f && \
   rm -rf /tmp/*
