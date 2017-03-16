@@ -12,6 +12,8 @@ cp -R cf-acceptance-tests $CF_GOPATH
 
 cd /go/src/github.com/cloudfoundry/cf-acceptance-tests
 
+export CF_DIAL_TIMEOUT=6
+
 ./bin/test \
 -keepGoing \
 -randomizeAllSpecs \
