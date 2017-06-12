@@ -17,3 +17,4 @@ run:
 params:
   NODES: 12
   CONFIG_FILE_PATH: integration_config.json
+  SKIP_REGEXP:
