@@ -19,5 +19,6 @@ export CF_DIAL_TIMEOUT=11
 -randomizeAllSpecs \
 -skipPackage=helpers \
 -slowSpecThreshold=120 \
--nodes="${NODES}"
+-nodes="${NODES}" \
+-skip="${SKIP_REGEXP}"
 
