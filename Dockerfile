@@ -8,6 +8,7 @@ RUN \
     curl \
     openssh-client \
     unzip \
+    jq \
     git
 
  ENV GOPATH /go
