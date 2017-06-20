@@ -3,6 +3,7 @@ set -xeu
 
 export CONFIG
 CONFIG="$PWD/integration-config/${CONFIG_FILE_PATH}"
+build_dir=${PWD}
 
 CF_GOPATH=/go/src/github.com/cloudfoundry/
 
@@ -22,3 +23,11 @@ export CF_DIAL_TIMEOUT=11
 -nodes="${NODES}" \
 -skip="${SKIP_REGEXP}"
 
+if ${CAPTURE_LOGS}; then
+  artifacts_directory=$(jq .artifacts_directory $CONFIG)
+  if [ "${artifacts_directory}" == "null" ]; then
+    artifacts_directory=../results
+  fi
+
+  cp -r ${artifacts_directory} ${build_dir}/cats-trace-output/
+fi
