@@ -31,4 +31,8 @@ export CF_PLUGIN_HOME=$HOME
 -skipPackage=helpers \
 -slowSpecThreshold=120 \
 -nodes="${NODES}" \
--skip="${SKIP_REGEXP}"
+-skip="${SKIP_REGEXP}" \
+-flakeAttempts=2
+#! flakeAttempts added 7/25 to mitigate reliability issues with the ruby buildpack.
+#! This is a temporary measure, and should be removed
+#! as soon as the buildpack issue is resolved.
