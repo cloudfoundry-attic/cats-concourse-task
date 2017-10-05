@@ -9,7 +9,8 @@ RUN \
     openssh-client \
     unzip \
     jq \
-    git
+    git && \
+  rm -rf /var/lib/apt/lists/*
 
  ENV GOPATH /go
  ENV PATH /go/bin:/usr/local/go/bin:$PATH
