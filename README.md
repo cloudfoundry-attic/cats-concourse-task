@@ -1,5 +1,9 @@
 # cats-concourse-task
 
+> **Notice**: This repo is deprecated.
+Please use `run-cats` and `run-cats-with-provided-cli`
+from [cf-deployment-concourse-tasks](https://github.com/cloudfoundry/cf-deployment-concourse-tasks).
+
 This repo contains [concourse](http://concourse.ci/) tasks
 which enable a CF developer to easily run CATs
 in a pipeline.
